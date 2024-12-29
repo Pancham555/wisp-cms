@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "imagedelivery.net",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.leonardo.ai",
+      },
     ],
   },
   redirects: async () => {

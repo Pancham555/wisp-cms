@@ -22,7 +22,7 @@ export const PostContent = ({ content }: { content: string }) => {
       "ul",
       "ol",
       "blockquote",
-      // tables
+      // "tables",
       "td",
       "th",
       "table",
