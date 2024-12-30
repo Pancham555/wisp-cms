@@ -3,6 +3,7 @@ import { BlogPostsPagination } from "@/components/BlogPostsPagination";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { wisp } from "@/lib/wisp";
+import HeroSectionSimpleCentred from "../components/Hero";
 
 const Page = async ({
   searchParams,
@@ -14,6 +15,7 @@ const Page = async ({
   return (
     <div className="container mx-auto px-5 mb-10">
       <Header />
+      <HeroSectionSimpleCentred />
       <BlogPostsPreview posts={result.posts} />
       <BlogPostsPagination pagination={result.pagination} />
       <Footer />

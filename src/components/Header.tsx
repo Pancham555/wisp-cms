@@ -9,9 +9,11 @@ import {
 import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+import Logo from "./Logo";
 interface MenuItem {
   name: string;
   href: string;
@@ -74,13 +76,16 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
+    <section className="flex items-center justify-between mt-8 md:mt-12 mb-12">
       <Link href="/">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
-          {config.blog.name}
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight my-auto">
+          {/* <Logo className="fill-black dark:fill-white w-48 h-20" /> */}
+          <span>{config.blog.name}</span>
         </h1>
       </Link>
-      <Navigation />
+      <div className="">
+        <Navigation />
+      </div>
     </section>
   );
 };
